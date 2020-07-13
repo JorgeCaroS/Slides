@@ -11,3 +11,186 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  display: block;
+  height: 20vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.Slides {
+  background-color: #282c34;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: left;*/
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.Title{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	40% {
+		-webkit-transform: translateY(-20px);
+		transform: translateY(-20px);
+	}
+
+	80% {
+		-webkit-transform: translateY(-10px);
+		transform: translateY(-10px);
+	}
+}
+
+.Slides-main2{  
+  width: 150px;
+  margin-bottom: 10px;
+  padding: 1px;  
+  margin: auto;
+  border: solid;
+  
+  
+}
+.Slides-main1{
+  width: 170px;
+  margin: auto;
+  padding: 1px;  
+  border: solid;  
+  border-color:  greenyellow;  
+  
+}
+
+.Slides-main3{
+  width: 170px;
+  margin: auto;
+  padding: 1px;  
+  border: solid;  
+  border-color:  red;  
+  
+}
+
+.Gallery  {
+ 
+display: flex;
+}
+
+
+.Gallery picture img {
+ 
+	opacity: 1;
+	-webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  background: blue;
+}
+
+.Gallery picture:hover img {
+  opacity: .5;  
+  border-radius: 20px;
+  
+}
+
+.Current-img{
+  
+  width: 300px;
+  margin: 10px;
+  padding: 1px;
+}
+.Current-img2{
+  
+  width: 300px;
+  margin: 10px;
+  padding: 1px;
+  
+  border-radius: 20px;
+  
+}
+
+
+
+.Input{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.single-slide{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+/* Container needed to position the button. Adjust the width as needed */
+.container {
+  position: relative;
+  width: 50%;
+  margin: 10px;
+  
+}
+
+/* Make the image responsive */
+.container img {
+  width: 100%;
+  height: auto;
+  
+}
+
+/* Style the button and place it in the middle of the container/image */
+.container .btn2 {
+  position: absolute;
+  top: 70%;
+  left: 57%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 12px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.container .btn1 {
+  display:none;
+}
+
+.container .btn:hover {
+  background-color: black;
+}
+

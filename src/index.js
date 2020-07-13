@@ -1,17 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import Login from "./Components/Login";
+import Home from "./Components/Home";
+import {
+  useHistory,
+  useLocation,
+  useParams,
+  BrowserRouter,
+  Router,
+  Route,
+} from "react-router-dom";
+import { FirebaseAppProvider } from "reactfire";
+import firebaseConfig from "./firebaseconfig";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+  <FirebaseAppProvider firebaseConfig={firebaseConfig}>
+    <BrowserRouter>
+      <React.Fragment>
+        <Route exact path="/">
+          <Login />
+        </Route>
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+        <Route exact path="/Home/:User">
+          <Home />
+        </Route>
+      </React.Fragment>
+    </BrowserRouter>
+  </FirebaseAppProvider>,
+  document.getElementById("root")
+);
