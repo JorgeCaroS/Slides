@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -30,11 +30,26 @@ code {
 
 .Slides {
   background-color: #282c34;
-  min-height: 50vh;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content:space-between; 
+  font-size: calc(2px + 2vmin);
+  color: white;
+}
+
+.Main {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;  
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.Main1 {
+  background-color: #282c34;
+  display: flex;
   align-items: center;
-  /*justify-content: left;*/
+  flex-direction: column;  
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -52,107 +67,49 @@ code {
   }
 }
 
-.Title{
+.Title {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 }
 
-@keyframes bounce {
-	0%, 20%, 60%, 100% {
-		-webkit-transform: translateY(0);
-		transform: translateY(0);
-	}
-
-	40% {
-		-webkit-transform: translateY(-20px);
-		transform: translateY(-20px);
-	}
-
-	80% {
-		-webkit-transform: translateY(-10px);
-		transform: translateY(-10px);
-	}
-}
-
-.Slides-main2{  
+.Slides-main2 {
   width: 150px;
   margin-bottom: 10px;
-  padding: 1px;  
+  padding: 1px;
   margin: auto;
   border: solid;
-  
-  
+  border-color: grey;
 }
-.Slides-main1{
-  width: 170px;
+.Slides-main1 {
+  width: 150px;
   margin: auto;
-  padding: 1px;  
-  border: solid;  
-  border-color:  greenyellow;  
-  
+  padding: 1px;
+  border: solid;
+  border-color: greenyellow;
+  margin-bottom: 10px;
 }
 
-.Slides-main3{
-  width: 170px;
+.Slides-main3 {
+  width: 150px;
   margin: auto;
-  padding: 1px;  
-  border: solid;  
-  border-color:  red;  
-  
-}
-
-.Gallery  {
- 
-display: flex;
-}
-
-
-.Gallery picture img {
- 
-	opacity: 1;
-	-webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
-  background: blue;
-}
-
-.Gallery picture:hover img {
-  opacity: .5;  
-  border-radius: 20px;
-  
-}
-
-.Current-img{
-  
-  width: 300px;
-  margin: 10px;
   padding: 1px;
-}
-.Current-img2{
-  
-  width: 300px;
-  margin: 10px;
-  padding: 1px;
-  
-  border-radius: 20px;
-  
+  border: solid;
+  border-color: red;
+  margin-bottom: 10px;
 }
 
 
 
-.Input{
+.Current-img {
+  width: 280px;
+  height: 200px;
+}
+
+.Input {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
-}
-
-.single-slide{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
 }
 
 /* Container needed to position the button. Adjust the width as needed */
@@ -160,37 +117,88 @@ display: flex;
   position: relative;
   width: 50%;
   margin: 10px;
-  
 }
 
 /* Make the image responsive */
-.container img {
+.container img {  
   width: 100%;
   height: auto;
-  
 }
 
 /* Style the button and place it in the middle of the container/image */
 .container .btn2 {
-  position: absolute;
+  position: absolute;  
+  padding: 1px;
   top: 70%;
-  left: 57%;
+  left: 54%;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   background-color: #555;
   color: white;
   font-size: 12px;
-  padding: 12px 24px;
+  padding: 5px 5px;
   border: none;
   cursor: pointer;
   border-radius: 5px;
 }
 
 .container .btn1 {
-  display:none;
+  display: none;
 }
 
 .container .btn:hover {
   background-color: black;
 }
 
+.Profile{
+  display:flex;
+  justify-content: space-around;
+}
+
+.Profile-right{
+  padding:10px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.log {
+    
+  padding: 5px;  
+  background-color: #555;
+  color: white;
+  font-size: 12px;  
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.reg {
+    
+  padding: 5px;  
+  background-color: rgb(22, 201, 214);
+  color: white;
+  font-size: 12px;  
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336; /* Red */
+  color: white;
+  margin-bottom: 15px;
+}
+
+.Gallery {
+  display: flex;
+  
+  width: auto;
+}
+
+.Gallery img {  
+  
+  height: 180px;
+}
